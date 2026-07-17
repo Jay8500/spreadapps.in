@@ -1,0 +1,41 @@
+<section id="services" class="container">
+  <p class="eyebrow"><span class="d"></span>INCLUDED</p>
+  <h2 class="section-title">Services</h2>
+
+  <div class="svc-grid">
+    @for (s of services; track s.name) {
+      <div class="svc-cell">
+        @switch (s.icon) {
+          @case ('world') {
+            <svg class="ic" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="9" />
+              <path
+                d="M3 12h18M12 3c2.5 2.5 3.5 6 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-6-3.5-9s1-6.5 3.5-9z"
+              />
+            </svg>
+          }
+          @case ('db') {
+            <svg class="ic" viewBox="0 0 24 24">
+              <ellipse cx="12" cy="6" rx="8" ry="3" />
+              <path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6" />
+              <path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6" />
+            </svg>
+          }
+          @case ('code') {
+            <svg class="ic" viewBox="0 0 24 24"><path d="M9 8l-5 4 5 4M15 8l5 4-5 4" /></svg>
+          }
+          @case ('headset') {
+            <svg class="ic" viewBox="0 0 24 24">
+              <path d="M4 13v-1a8 8 0 0 1 16 0v1" />
+              <rect x="3" y="13" width="4" height="6" rx="1" />
+              <rect x="17" y="13" width="4" height="6" rx="1" />
+              <path d="M19 19v1a2 2 0 0 1-2 2h-4" />
+            </svg>
+          }
+        }
+        <h4>{{ s.name }}</h4>
+        <p>{{ s.description }}</p>
+      </div>
+    }
+  </div>
+</section>

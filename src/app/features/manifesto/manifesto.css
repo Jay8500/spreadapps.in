@@ -1,0 +1,16 @@
+:host { display: block; }
+.container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+section { padding-top: 84px; padding-bottom: 74px; }
+
+.bento { display: grid; grid-template-columns: repeat(6,1fr); gap: 20px; }
+.cell { border-radius: 20px; padding: 32px; }
+.cell.fill { background: linear-gradient(150deg,#0F766E,#0D9488 60%); color: #fff; }
+
+.manifesto { grid-column: span 6; padding: 36px; margin-top: 14px; box-shadow: 0 16px 36px -16px rgba(15,118,110,.35); }
+.manifesto h2 { font-family: 'Plus Jakarta Sans', sans-serif; color: #fff; font-size: 22px; margin: 0 0 14px; font-weight: 700; }
+.manifesto p { color: #D7F4EF; font-size: 14.5px; margin: 0 0 12px; max-width: 680px; }
+
+@media (max-width: 760px) {
+  .bento { grid-template-columns: 1fr; }
+  .manifesto { grid-column: span 1; }
+}

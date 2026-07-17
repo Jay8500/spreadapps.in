@@ -1,0 +1,10 @@
+:host { display: block; height: 100%; }
+.quote-cell { border-radius: 20px; padding: 26px; background: #0B1120; color: #fff; display: flex; flex-direction: column; justify-content: center; height: 100%; box-sizing: border-box; }
+.quote-cell h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 17px; margin: 0 0 6px; }
+.quote-cell p { color: #A9B4C4; font-size: 13px; margin: 0 0 14px; }
+
+.btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn { padding: 11px 20px; border-radius: 99px; font-size: 13.5px; font-weight: 600; cursor: pointer; border: 1px solid transparent; transition: transform .2s; }
+.btn.primary { background: #14B8A6; color: #0B1120; }
+.btn.ghost { background: transparent; color: #fff; border-color: #3A4556; }
+.btn:hover { transform: translateY(-2px); }

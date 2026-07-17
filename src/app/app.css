@@ -1,0 +1,2 @@
+.team-quote-wrap { max-width: 1080px; margin: 0 auto; padding: 84px 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 760px) { .team-quote-wrap { grid-template-columns: 1fr; padding: 60px 24px; } }

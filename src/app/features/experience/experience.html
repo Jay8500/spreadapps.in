@@ -1,0 +1,30 @@
+<section class="container">
+  <p class="eyebrow"><span class="d"></span>TIMELINE</p>
+  <h2 class="section-title">Experience</h2>
+
+  <div class="log-grid">
+    @for (item of items; track item.role) {
+      <div class="log-card" [class.open]="item.open">
+        <div class="log-head" (click)="toggle(item)">
+          <div class="log-head-top">
+            <span class="yr">{{ item.year }}</span>
+            <svg class="ic chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
+          </div>
+          <h4>{{ item.role }}</h4>
+        </div>
+        <div class="log-body">
+          <div class="log-body-inner">
+            <p>{{ item.description }}</p>
+            @if (item.tags) {
+              <div class="tags">
+                @for (tag of item.tags; track tag) {
+                  <span>{{ tag }}</span>
+                }
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</section>

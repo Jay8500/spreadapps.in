@@ -1,0 +1,27 @@
+:host { display: block; }
+.mnav-toggle { display: none; }
+.mnav-overlay { display: none; }
+
+@media (max-width: 760px) {
+  .mnav-toggle {
+    display: flex; align-items: center; justify-content: center;
+    width: 38px; height: 38px; border-radius: 50%;
+    border: 1px solid #E7EDEC; background: #fff; cursor: pointer;
+    position: fixed; top: 18px; right: 24px; z-index: 40;
+  }
+  .mnav-toggle svg { width: 18px; height: 18px; }
+
+  .mnav-overlay {
+    display: block; position: fixed; inset: 0; background: #fff; z-index: 50;
+    transform: translateY(-100%); transition: transform .35s cubic-bezier(.22,.61,.36,1);
+    overflow-y: auto;
+  }
+  .mnav-overlay.open { transform: translateY(0); }
+
+  .mnav-top { display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; }
+  .brand { display: flex; align-items: center; gap: 9px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 15px; }
+  .mnav-close { width: 38px; height: 38px; border-radius: 50%; border: 1px solid #E7EDEC; background: none; display: flex; align-items: center; justify-content: center; }
+  .mnav-links { padding: 20px 24px; display: flex; flex-direction: column; gap: 6px; }
+  .mnav-links a { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 34px; font-weight: 600; color: #0B1120; text-decoration: none; padding: 14px 0; border-bottom: 1px solid #E7EDEC; }
+  .mnav-cta { margin: 24px; padding: 16px; border-radius: 99px; background: #0B1120; color: #fff; text-align: center; font-weight: 600; }
+}

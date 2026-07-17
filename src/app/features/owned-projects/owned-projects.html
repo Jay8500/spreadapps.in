@@ -1,0 +1,17 @@
+<section id="projects" class="container">
+  <p class="eyebrow"><span class="d"></span>OWNED</p>
+  <h2 class="section-title">Products I own</h2>
+
+  <div class="proj-grid">
+    @for (p of projects; track p.name) {
+      <div class="proj-card">
+        <div class="bar" [style.background]="p.barStyle"></div>
+        <div class="status"><span class="d"></span>{{ p.status }}</div>
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.description }}</p>
+        <p class="path">{{ p.path }}</p>
+        <a class="code" [href]="p.codeUrl" target="_blank" rel="noopener">View code →</a>
+      </div>
+    }
+  </div>
+</section>

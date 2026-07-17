@@ -1,0 +1,45 @@
+<button class="mnav-toggle" (click)="open()" aria-label="Open menu">
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+  >
+    <path d="M4 7h16M4 12h16M4 17h16" />
+  </svg>
+</button>
+
+<div class="mnav-overlay" [class.open]="isOpen">
+  <div class="mnav-top">
+    <div class="brand">
+      <svg width="24" height="24" viewBox="0 0 200 200">
+        <circle cx="70" cy="140" r="16" fill="#5EEAD4" />
+        <circle cx="102" cy="106" r="21" fill="#2DD4BF" />
+        <circle cx="140" cy="66" r="28" fill="#0D9488" />
+      </svg>
+      Spread Apps
+    </div>
+    <button class="mnav-close" (click)="close()" aria-label="Close menu">
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+      >
+        <path d="M6 6l12 12M18 6L6 18" />
+      </svg>
+    </button>
+  </div>
+  <div class="mnav-links">
+    <a href="#about" (click)="close()">About</a>
+    <a href="#projects" (click)="close()">Projects</a>
+    <a href="#skills" (click)="close()">Skills</a>
+    <a href="#services" (click)="close()">Services</a>
+    <a href="#contact" (click)="close()">Contact</a>
+  </div>
+  <div class="mnav-cta">Get in touch</div>
+</div>

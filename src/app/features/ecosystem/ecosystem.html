@@ -1,0 +1,31 @@
+<section class="container">
+  <p class="eyebrow center">ECOSYSTEM</p>
+  <h2 class="section-title center">One brand, connected products</h2>
+  <p class="section-sub center">Everything traces back to spreadapps.in</p>
+
+  <div class="eco-parent">
+    <div class="eco-dots"><span></span><span></span><span class="full"></span></div>
+    <h3>Spread Apps</h3>
+    <span class="domain">spreadapps.in</span>
+  </div>
+  <div class="eco-trunk"></div>
+  <div class="eco-branchline"></div>
+  <div class="eco-children">
+    @for (child of children; track child.name) {
+      <div class="eco-child">
+        <div class="eco-card" [class.future]="child.future">
+          @if (!child.future) {
+            <div class="eco-bar" [style.background]="child.barStyle"></div>
+          }
+          <h4>{{ child.name }}</h4>
+          <div class="eco-status">
+            @if (!child.future) {
+              <span class="d"></span>
+            }
+            {{ child.status }}
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</section>
