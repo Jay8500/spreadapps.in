@@ -6,46 +6,48 @@
     @for (skill of skills; track skill.name; let i = $index) {
       <div class="skill-card" [class.open]="openIndex === i">
         <div class="skill-head" (click)="toggle(i)">
-          @switch (skill.name) {
-            @case ('Angular') {
-              <svg class="ic" viewBox="0 0 24 24">
-                <path d="M12 3l8 3 -1.2 11L12 21l-6.8-4L4 6z" />
-                <path d="M9.5 15h5M12 7l3.5 8M12 7L8.5 15" />
-              </svg>
+          <div class="left">
+            @switch (skill.name) {
+              @case ('Angular') {
+                <svg class="ic" viewBox="0 0 24 24">
+                  <path d="M12 3l8 3 -1.2 11L12 21l-6.8-4L4 6z" />
+                  <path d="M9.5 15h5M12 7l3.5 8M12 7L8.5 15" />
+                </svg>
+              }
+              @case ('Ionic') {
+                <svg class="ic" viewBox="0 0 24 24">
+                  <rect x="6" y="3" width="12" height="18" rx="2" />
+                  <path d="M11 18h2" />
+                </svg>
+              }
+              @case ('PostgreSQL') {
+                <svg class="ic" viewBox="0 0 24 24">
+                  <ellipse cx="12" cy="6" rx="8" ry="3" />
+                  <path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6" />
+                  <path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6" />
+                </svg>
+              }
+              @case ('Supabase') {
+                <svg class="ic" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z" /></svg>
+              }
+              @case ('Firebase') {
+                <svg class="ic" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2c3 4-2 5-1 9 1-2 3-2 3-2 1 3-1 5-2 6-3 2-7 1-8-2-1-3 0-6 2-8 1 1 1 3 1 3s1-4 5-6z"
+                  />
+                </svg>
+              }
+              @case ('PrimeNG') {
+                <svg class="ic" viewBox="0 0 24 24">
+                  <rect x="3" y="3" width="7" height="7" rx="1" />
+                  <rect x="14" y="3" width="7" height="7" rx="1" />
+                  <rect x="3" y="14" width="7" height="7" rx="1" />
+                  <rect x="14" y="14" width="7" height="7" rx="1" />
+                </svg>
+              }
             }
-            @case ('Ionic') {
-              <svg class="ic" viewBox="0 0 24 24">
-                <rect x="6" y="3" width="12" height="18" rx="2" />
-                <path d="M11 18h2" />
-              </svg>
-            }
-            @case ('PostgreSQL') {
-              <svg class="ic" viewBox="0 0 24 24">
-                <ellipse cx="12" cy="6" rx="8" ry="3" />
-                <path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6" />
-                <path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6" />
-              </svg>
-            }
-            @case ('Supabase') {
-              <svg class="ic" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z" /></svg>
-            }
-            @case ('Firebase') {
-              <svg class="ic" viewBox="0 0 24 24">
-                <path
-                  d="M12 2c3 4-2 5-1 9 1-2 3-2 3-2 1 3-1 5-2 6-3 2-7 1-8-2-1-3 0-6 2-8 1 1 1 3 1 3s1-4 5-6z"
-                />
-              </svg>
-            }
-            @case ('PrimeNG') {
-              <svg class="ic" viewBox="0 0 24 24">
-                <rect x="3" y="3" width="7" height="7" rx="1" />
-                <rect x="14" y="3" width="7" height="7" rx="1" />
-                <rect x="3" y="14" width="7" height="7" rx="1" />
-                <rect x="14" y="14" width="7" height="7" rx="1" />
-              </svg>
-            }
-          }
-          <span>{{ skill.name }}</span>
+            <span>{{ skill.name }}</span>
+          </div>
           <svg class="ic chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
         </div>
         <div class="skill-body">

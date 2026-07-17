@@ -5,6 +5,7 @@ interface TeamMember {
   name: string;
   role: string;
   open?: boolean;
+  photo?: string;
 }
 
 @Component({
@@ -16,7 +17,12 @@ interface TeamMember {
 })
 export class Team {
   members: TeamMember[] = [
-    { initials: 'JK', name: 'Jaya Krishna Lakkoju', role: 'Founder · solo' },
+    {
+      initials: 'JK',
+      name: 'Jaya Krishna Lakkoju',
+      role: 'Independent Developer · solo',
+      photo: 'profile-photo.jpg',
+    },
     { initials: '+', name: 'Open roles', role: 'Future collaborators', open: true },
   ];
 }

@@ -26,9 +26,9 @@ export class Experience {
     },
     {
       year: '2026 — PRESENT',
-      role: 'Founder, Spread Apps',
+      role: 'Independent Developer, Spread Apps',
       description:
-        'Independent products and freelance client work, built and deployed end to end — from database design to production.',
+        'Independent, self-directed projects and freelance client work, built and deployed end to end — from database design to production.',
       tags: ['Circles', 'Hospital management', 'OTT money saver'],
       open: false,
     },

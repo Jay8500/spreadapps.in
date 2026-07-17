@@ -1,6 +1,6 @@
 :host { display: block; }
 .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
-section { padding-top: 84px; padding-bottom: 84px; }
+section.container { padding-top: 84px; padding-bottom: 84px; }
 
 .eyebrow { font-size: 13px; font-weight: 600; color: #0D9488; margin: 0 0 10px; display: flex; align-items: center; gap: 6px; }
 .eyebrow .d { width: 6px; height: 6px; border-radius: 50%; background: #14B8A6; }

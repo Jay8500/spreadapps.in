@@ -1,7 +1,11 @@
 <div class="team-col">
   @for (m of members; track m.name) {
     <div class="team-cell">
-      <div class="avatar" [class.open]="m.open">{{ m.initials }}</div>
+      @if (m.photo) {
+        <img class="avatar-photo" [src]="m.photo" alt="{{ m.name }}" />
+      } @else {
+        <div class="avatar" [class.open]="m.open">{{ m.initials }}</div>
+      }
       <div>
         <div class="name">{{ m.name }}</div>
         <div class="role">{{ m.role }}</div>
