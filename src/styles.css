@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+/* ---------- Reset & base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, sans-serif;
+  color: #0B1120;
+  background: #fff;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6, p, figure, blockquote { margin: 0; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; line-height: 1.2; }
+
+img, picture { max-width: 100%; display: block; }
+a { color: inherit; }
+button { font-family: inherit; }
+
+::selection { background: #99F6E4; color: #0B1120; }
+:focus-visible { outline: 2px solid #0D9488; outline-offset: 2px; border-radius: 4px; }
+
+/* ---------- Spacing scale ----------
+   Every section uses var(--section-py) for its top/bottom padding,
+   so the rhythm stays consistent site-wide and shrinks predictably
+   on smaller screens instead of each component hardcoding its own. */
+:root {
+  --section-py: 14px;
+  --container-px: 2px;
+}
+
+@media (max-width: 900px) {
+  :root { --section-py: 48px; }
+}
+
+@media (max-width: 560px) {
+  :root { --section-py: 18px; --container-px: 18px; }
+}

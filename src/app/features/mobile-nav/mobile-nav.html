@@ -1,4 +1,4 @@
-<button class="mnav-toggle" (click)="open()" aria-label="Open menu">
+<!-- <button class="mnav-toggle" (click)="open()" aria-label="Open menu">
   <svg
     viewBox="0 0 24 24"
     fill="none"
@@ -8,7 +8,31 @@
   >
     <path d="M4 7h16M4 12h16M4 17h16" />
   </svg>
-</button>
+</button> -->
+
+<!-- ఇది కొత్తగా యాడ్ చెయ్ -->
+<div class="mobile-header">
+  <div class="brand">
+    <svg width="24" height="24" viewBox="0 0 200 200">
+      <circle cx="70" cy="140" r="16" fill="#5EEAD4" />
+      <circle cx="102" cy="106" r="21" fill="#2DD4BF" />
+      <circle cx="140" cy="66" r="28" fill="#0D9488" />
+    </svg>
+    Spread Apps
+  </div>
+
+  <button class="mnav-toggle" (click)="open()" aria-label="Open menu">
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+    >
+      <path d="M4 7h16M4 12h16M4 17h16" />
+    </svg>
+  </button>
+</div>
 
 <div class="mnav-overlay" [class.open]="isOpen">
   <div class="mnav-top">

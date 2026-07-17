@@ -1,5 +1,5 @@
 :host { display: block; }
-.container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+.container { max-width: 1080px; margin: 0 auto; padding: 0 var(--container-px); }
 .hero-bento { margin-top: 26px; padding-top: 26px; padding-bottom: 26px; }
 
 .bento { display: grid; grid-template-columns: repeat(6,1fr); gap: 20px; }

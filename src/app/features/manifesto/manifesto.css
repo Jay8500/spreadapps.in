@@ -1,6 +1,6 @@
 :host { display: block; }
-.container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
-section.container { padding-top: 84px; padding-bottom: 74px; }
+.container { max-width: 1080px; margin: 0 auto; padding: 0 var(--container-px); }
+section.container { padding-top: var(--section-py); padding-bottom: var(--section-py); }
 
 .bento { display: grid; grid-template-columns: repeat(6,1fr); gap: 20px; }
 .cell { border-radius: 20px; padding: 32px; }

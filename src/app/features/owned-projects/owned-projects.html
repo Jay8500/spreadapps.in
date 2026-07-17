@@ -1,17 +1,53 @@
-<section id="projects" class="container">
-  <p class="eyebrow"><span class="d"></span>OWNED</p>
-  <h2 class="section-title">Products I own</h2>
+<section class="container owned-projects">
+  <div class="eyebrow"><span class="d"></span>PORTFOLIO</div>
+  <h2 class="section-title">Owned Projects</h2>
 
   <div class="proj-grid">
     @for (p of projects; track p.name) {
       <div class="proj-card">
         <div class="bar" [style.background]="p.barStyle"></div>
+
+        @if (screenshots(p).length) {
+          <div class="proj-gallery">
+            @for (src of screenshots(p); track src; let i = $index) {
+              <img
+                class="proj-thumb"
+                [src]="src"
+                [alt]="p.name + ' screenshot'"
+                loading="lazy"
+                (click)="openLightbox(screenshots(p), i)"
+              />
+            }
+          </div>
+        }
+
         <div class="status"><span class="d"></span>{{ p.status }}</div>
         <h3>{{ p.name }}</h3>
         <p>{{ p.description }}</p>
-        <p class="path">{{ p.path }}</p>
-        <a class="code" [href]="p.codeUrl" target="_blank" rel="noopener">View code →</a>
+        <div class="links">
+          <span class="path">{{ p.path }}</span>
+          <a class="code" [href]="p.codeUrl" target="_blank" rel="noopener">Code</a>
+        </div>
       </div>
     }
   </div>
 </section>
+
+@if (lightboxSrc) {
+  <div class="lightbox" (click)="closeLightbox()">
+    <button class="lightbox-close" (click)="closeLightbox()" aria-label="Close">&times;</button>
+
+    @if (lightboxImages.length > 1) {
+      <button class="lightbox-nav prev" (click)="prev($event)" aria-label="Previous image">&#8249;</button>
+    }
+
+    <img [src]="lightboxSrc" alt="" (click)="$event.stopPropagation()" />
+
+    @if (lightboxImages.length > 1) {
+      <button class="lightbox-nav next" (click)="next($event)" aria-label="Next image">&#8250;</button>
+      <div class="lightbox-count" (click)="$event.stopPropagation()">
+        {{ lightboxIndex + 1 }} / {{ lightboxImages.length }}
+      </div>
+    }
+  </div>
+}

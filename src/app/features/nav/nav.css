@@ -1,7 +1,7 @@
 :host { display: block; }
 nav { position: sticky; top: 0; z-index: 30; background: rgba(255,255,255,.85); backdrop-filter: blur(10px); border-bottom: 1px solid transparent; transition: border-color .3s, padding .3s; padding: 18px 0; }
 nav.scrolled { border-color: #E7EDEC; }
-.container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+.container { max-width: 1080px; margin: 0 auto; padding: 0 var(--container-px); }
 .row { display: flex; align-items: center; justify-content: space-between; }
 .brand { display: flex; align-items: center; gap: 9px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 15px; }
 .links { display: flex; gap: 26px; font-size: 13.5px; color: #64748B; }
