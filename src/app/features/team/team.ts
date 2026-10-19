@@ -20,7 +20,7 @@ export class Team {
     {
       initials: 'JK',
       name: 'Jaya Krishna Lakkoju',
-      role: 'Founder · SpreadApps',
+      role: 'Independent Developer · solo',
       photo: 'profile-photo.jpg',
     },
     { initials: '+', name: 'Open roles', role: 'Future collaborators', open: true },
