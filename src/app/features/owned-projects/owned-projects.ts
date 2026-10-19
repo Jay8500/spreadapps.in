@@ -40,6 +40,28 @@ export class OwnedProjects {
       barStyle: '#0F766E',
       // screenshotFolder/screenshotCount pending — needs a demo tenant with fake data first
     },
+    {
+      name: 'SpreadApps AI-Lab',
+      status: 'Live · multi-tenant lab SaaS',
+      description:
+        'Diagnostic lab platform — patient tokens, live sample tracking, result entry with ranges, instant PDF reports on WhatsApp and a branded portal for every lab on its own sub-domain.',
+      path: 'ailab.spreadapps.in',
+      codeUrl: 'https://github.com/Jay8500/ai-lab',
+      barStyle: 'linear-gradient(90deg,#6366F1,#8B5CF6,#10B981)',
+      screenshotFolder: 'ai-lab',
+      screenshotCount: 5,
+    },
+    {
+      name: 'SpreadApps Tools',
+      status: 'Live · free tools for India',
+      description:
+        '95+ free tools for Telangana & AP — exam photo resizer, money calculators, PDF tools, metro fare, fuel prices with daily auto-update, holidays, recharge & OTT prices. Installable, works offline, files never leave the phone.',
+      path: 'tools.spreadapps.in',
+      codeUrl: 'https://github.com/Jay8500/online-tools',
+      barStyle: 'linear-gradient(90deg,#0D9488,#14B8A6,#5EEAD4)',
+      screenshotFolder: 'spreadapps-tools',
+      screenshotCount: 8,
+    },
   ];
 
   // Lightbox state: the active gallery + which image within it is open.
