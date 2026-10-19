@@ -19,7 +19,7 @@ export class Skills {
     {
       name: 'Angular',
       description:
-        'Primary framework for building the web apps and admin dashboards — like the Hospital Management System.',
+        'Primary framework for building the web apps and admin dashboards — like AI-Lab and SpreadApps Tools.',
     },
     {
       name: 'Ionic',
@@ -29,7 +29,7 @@ export class Skills {
     {
       name: 'PostgreSQL',
       description:
-        'Relational schema design, including multi-tenant data isolation for hospital clients.',
+        'Relational schema design, including multi-tenant data isolation for lab clients in AI-Lab.',
     },
     {
       name: 'Supabase',

@@ -9,6 +9,8 @@ interface Project {
   barStyle: string;
   screenshotFolder?: string;
   screenshotCount?: number;
+  /** Not shown on the site (kept for later) */
+  hidden?: boolean;
 }
 
 @Component({
@@ -19,7 +21,7 @@ interface Project {
   styleUrl: './owned-projects.css',
 })
 export class OwnedProjects {
-  projects: Project[] = [
+  private readonly all: Project[] = [
     {
       name: 'Circles',
       status: 'Live · own product',
@@ -38,6 +40,8 @@ export class OwnedProjects {
       path: 'care-clinic.spreadapps.in',
       codeUrl: 'https://github.com/Jay8500/hms-admin',
       barStyle: '#0F766E',
+      // Hidden while employed elsewhere — set to false (or delete this line) to show it again
+      hidden: true,
       // screenshotFolder/screenshotCount pending — needs a demo tenant with fake data first
     },
     {
@@ -63,6 +67,8 @@ export class OwnedProjects {
       screenshotCount: 8,
     },
   ];
+
+  protected readonly projects = this.all.filter((p) => !p.hidden);
 
   // Lightbox state: the active gallery + which image within it is open.
   lightboxImages: string[] = [];
