@@ -19,7 +19,7 @@ export class Skills {
     {
       name: 'Angular',
       description:
-        'Primary framework for building the web apps and admin dashboards — like AI-Lab and SpreadApps Tools.',
+        'Primary framework for building the web apps and admin dashboards — like AI-Lab and Spread Apps Tools.',
     },
     {
       name: 'Ionic',

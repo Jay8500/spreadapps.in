@@ -29,7 +29,7 @@ export class Experience {
       role: 'Independent Developer, Spread Apps',
       description:
         'Independent, self-directed projects and freelance client work, built and deployed end to end — from database design to production.',
-      tags: ['Circles', 'AI-Lab', 'SpreadApps Tools', 'OTT money saver'],
+      tags: ['Circles', 'AI-Lab', 'Spread Apps Tools', 'OTT money saver'],
       open: false,
     },
   ];

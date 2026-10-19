@@ -45,7 +45,7 @@ export class OwnedProjects {
       // screenshotFolder/screenshotCount pending — needs a demo tenant with fake data first
     },
     {
-      name: 'SpreadApps AI-Lab',
+      name: 'Spread Apps AI-Lab',
       status: 'Live · multi-tenant lab SaaS',
       description:
         'Diagnostic lab platform — patient tokens, live sample tracking, result entry with ranges, instant PDF reports on WhatsApp and a branded portal for every lab on its own sub-domain.',
@@ -56,7 +56,7 @@ export class OwnedProjects {
       screenshotCount: 5,
     },
     {
-      name: 'SpreadApps Tools',
+      name: 'Spread Apps Tools',
       status: 'Live · free tools for India',
       description:
         '95+ free tools for Telangana & AP — exam photo resizer, money calculators, PDF tools, metro fare, fuel prices with daily auto-update, holidays, recharge & OTT prices. Installable, works offline, files never leave the phone.',
