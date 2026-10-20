@@ -80,6 +80,16 @@ export class OwnedProjects {
       linkLabel: 'Join waitlist',
       barStyle: 'linear-gradient(90deg,#0D9488,#2DD4BF,#F43F5E)',
     },
+    {
+      name: 'Spread Engine',
+      status: 'Coming soon · developer tool',
+      description:
+        'Your next Angular app, ready in 10 minutes — one command sets up Tailwind, Supabase login & database, Resend emails, PWA and Netlify deploy. Free core, Pro kit for payments, admin and multi-tenant. Made with ❤️ for India.',
+      path: 'engine.spreadapps.in',
+      codeUrl: 'https://engine.spreadapps.in',
+      linkLabel: 'Join waitlist',
+      barStyle: 'linear-gradient(90deg,#0D9488,#5EEAD4,#F43F5E)',
+    },
   ];
 
   protected readonly projects = this.all.filter((p) => !p.hidden);
