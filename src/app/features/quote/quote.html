@@ -1,18 +1,65 @@
-<div class="quote-cell">
-  <h3>Have a project in mind?</h3>
-  <p>Tell me what you're building — I'll get back with scope and a quote, usually within a day.</p>
-  <!-- <div class="btn-row">
-    <button class="btn primary" (click)="requestQuote()">Request a quote</button>
-    <button class="btn ghost" (click)="openWhatsapp()">WhatsApp</button>
-  </div> -->
-  <div class="btn-row">
-    <button
-      class="btn primary"
-      (click)="requestQuote()"
-      title="Coming soon — message on WhatsApp for now"
-    >
-      Request a quote
-    </button>
-    <button class="btn ghost" (click)="openWhatsapp()">WhatsApp</button>
-  </div>
+<div class="quote-cell" id="quote">
+  @if (state() === 'sent') {
+    <div class="done" role="status">
+      <div class="done-ic" aria-hidden="true">✓</div>
+      <h3>Thanks, {{ name().trim().split(' ')[0] }}!</h3>
+      <p>Your message reached me. I’ll reply to {{ email().trim() }} — usually within a day.</p>
+      <div class="btn-row"><button class="btn ghost" type="button" (click)="reset()">Send another</button></div>
+    </div>
+  } @else if (!contact.formOpen()) {
+    <h3>Have a project in mind?</h3>
+    <p>Tell me what you're building — I'll get back with scope and a quote, usually within a day.</p>
+    <div class="btn-row">
+      <button class="btn primary" type="button" (click)="requestQuote()">Request a quote</button>
+      <button class="btn ghost" type="button" (click)="openWhatsapp()">WhatsApp</button>
+    </div>
+  } @else {
+    <form class="form" (submit)="send($event)" novalidate aria-labelledby="q-title">
+      <div class="form-head">
+        <h3 id="q-title">Get in touch</h3>
+        <button class="x" type="button" (click)="contact.formOpen.set(false)" aria-label="Close form">✕</button>
+      </div>
+      <div class="topics" role="group" aria-label="What is it about?">
+        @for (t of topics; track t) {
+          <button type="button" class="chip" [class.on]="topic() === t" [attr.aria-pressed]="topic() === t" (click)="topic.set(t)">{{ t }}</button>
+        }
+      </div>
+      <div class="row2">
+        <label class="f">
+          <span>Name</span>
+          <input id="c-name" autocomplete="name" maxlength="80" [value]="name()" (input)="name.set(val($event))"
+                 [class.bad]="touched() && nameError()" [attr.aria-invalid]="touched() && !!nameError()" />
+          @if (touched() && nameError()) { <small role="alert">{{ nameError() }}</small> }
+        </label>
+        <label class="f">
+          <span>Email</span>
+          <input type="email" autocomplete="email" inputmode="email" maxlength="120" [value]="email()" (input)="email.set(val($event))"
+                 [class.bad]="touched() && emailError()" [attr.aria-invalid]="touched() && !!emailError()" />
+          @if (touched() && emailError()) { <small role="alert">{{ emailError() }}</small> }
+        </label>
+      </div>
+      <label class="f">
+        <span>Phone <em>(optional)</em></span>
+        <input type="tel" autocomplete="tel" inputmode="tel" maxlength="16" [value]="phone()" (input)="phone.set(val($event))"
+               [class.bad]="touched() && phoneError()" [attr.aria-invalid]="touched() && !!phoneError()" />
+        @if (touched() && phoneError()) { <small role="alert">{{ phoneError() }}</small> }
+      </label>
+      <label class="f">
+        <span>Message</span>
+        <textarea rows="4" maxlength="3000" placeholder="What do you need? Any timeline or budget?" [value]="message()" (input)="message.set(val($event))"
+                  [class.bad]="touched() && messageError()" [attr.aria-invalid]="touched() && !!messageError()"></textarea>
+        @if (touched() && messageError()) { <small role="alert">{{ messageError() }}</small> }
+      </label>
+      <!-- Hidden from people; bots fill it -->
+      <input class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" name="website" [value]="honey()" (input)="honey.set(val($event))" />
+      @if (state() === 'error') {
+        <p class="err" role="alert">{{ errorText() }} <a href="https://wa.me/918500913198" target="_blank" rel="noopener">Open WhatsApp</a></p>
+      }
+      <div class="btn-row">
+        <button class="btn primary" type="submit" [disabled]="state() === 'sending'">{{ state() === 'sending' ? 'Sending…' : 'Send message' }}</button>
+        <button class="btn ghost" type="button" (click)="openWhatsapp()">WhatsApp</button>
+      </div>
+      <p class="note">Goes straight to my inbox. Your details are used only to reply to you.</p>
+    </form>
+  }
 </div>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ContactService } from '../../core/services/contact';
 
 @Component({
   selector: 'app-nav',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './nav.html',
   styleUrl: './nav.css',
 })
-export class Nav {}
+export class Nav {
+  protected readonly contact = inject(ContactService);
+}

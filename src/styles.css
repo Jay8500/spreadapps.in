@@ -40,3 +40,6 @@ button { font-family: inherit; }
 @media (max-width: 560px) {
   :root { --section-py: 18px; --container-px: 18px; }
 }
+
+/* Sticky nav: keep anchored sections visible below it */
+section[id], footer[id] { scroll-margin-top: 80px; }

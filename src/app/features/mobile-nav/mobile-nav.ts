@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ContactService } from '../../core/services/contact';
 
 @Component({
   selector: 'app-mobile-nav',
@@ -8,6 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './mobile-nav.css',
 })
 export class MobileNav {
+  protected readonly contact = inject(ContactService);
   isOpen = false;
 
   open() {

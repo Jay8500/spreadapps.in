@@ -44,7 +44,7 @@
   .mnav-close { width: 38px; height: 38px; border-radius: 50%; border: 1px solid #E7EDEC; background: none; display: flex; align-items: center; justify-content: center; }
   .mnav-links { padding: 20px 24px; display: flex; flex-direction: column; gap: 6px; }
   .mnav-links a { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 34px; font-weight: 600; color: #0B1120; text-decoration: none; padding: 14px 0; border-bottom: 1px solid #E7EDEC; }
-  .mnav-cta { margin: 24px; padding: 16px; border-radius: 99px; background: #0B1120; color: #fff; text-align: center; font-weight: 600; }
+  .mnav-cta { display: block; width: calc(100% - 48px); border: 0; font: inherit; cursor: pointer; margin: 24px; padding: 16px; border-radius: 99px; background: #0B1120; color: #fff; text-align: center; font-weight: 600; }
 }
 
 @media (min-width: 761px) {
