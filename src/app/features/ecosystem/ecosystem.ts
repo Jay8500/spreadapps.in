@@ -25,7 +25,8 @@ export class Ecosystem {
     },
     // Hidden while employed elsewhere — set hidden: false to show it again
     { name: 'Hospital MS', status: 'Multi-tenant', barStyle: '#0F766E', hidden: true },
-    { name: 'AI-Lab', status: 'Lab SaaS', barStyle: 'linear-gradient(90deg,#6366F1,#8B5CF6,#10B981)' },
+    // Hidden while employed elsewhere — set hidden: false to show again
+    { name: 'AI-Lab', status: 'Lab SaaS', barStyle: 'linear-gradient(90deg,#6366F1,#8B5CF6,#10B981)', hidden: true },
     { name: 'Tools', status: 'Free tools', barStyle: 'linear-gradient(90deg,#0D9488,#14B8A6,#5EEAD4)' },
   ];
 

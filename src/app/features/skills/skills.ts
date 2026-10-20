@@ -19,7 +19,7 @@ export class Skills {
     {
       name: 'Angular',
       description:
-        'Primary framework for building the web apps and admin dashboards — like AI-Lab and Spread Apps Tools.',
+        'Primary framework for building the web apps and admin dashboards — like Spread Apps Tools.',
     },
     {
       name: 'Ionic',
@@ -29,7 +29,7 @@ export class Skills {
     {
       name: 'PostgreSQL',
       description:
-        'Relational schema design, including multi-tenant data isolation for lab clients in AI-Lab.',
+        'Relational schema design, including multi-tenant data isolation.',
     },
     {
       name: 'Supabase',

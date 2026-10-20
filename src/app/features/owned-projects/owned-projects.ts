@@ -54,6 +54,8 @@ export class OwnedProjects {
       barStyle: 'linear-gradient(90deg,#6366F1,#8B5CF6,#10B981)',
       screenshotFolder: 'ai-lab',
       screenshotCount: 5,
+      // Hidden while employed elsewhere (similar to the employer's software) — set hidden: false to show again
+      hidden: true,
     },
     {
       name: 'Spread Apps Tools',
