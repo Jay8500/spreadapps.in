@@ -6,6 +6,8 @@ interface Project {
   description: string;
   path: string;
   codeUrl: string;
+  /** Link text (default "Code") */
+  linkLabel?: string;
   barStyle: string;
   screenshotFolder?: string;
   screenshotCount?: number;
@@ -67,6 +69,16 @@ export class OwnedProjects {
       barStyle: 'linear-gradient(90deg,#0D9488,#14B8A6,#5EEAD4)',
       screenshotFolder: 'spreadapps-tools',
       screenshotCount: 8,
+    },
+    {
+      name: 'Setu',
+      status: 'Coming soon · professional community',
+      description:
+        'India’s bridge to people, skills & work — profiles, Q&A, genuine jobs (salary shown, no fees) and work chats, for students to experts in every Indian language. Made with ❤️ in India.',
+      path: 'setu.spreadapps.in',
+      codeUrl: 'https://setu.spreadapps.in',
+      linkLabel: 'Join waitlist',
+      barStyle: 'linear-gradient(90deg,#0D9488,#2DD4BF,#F43F5E)',
     },
   ];
 

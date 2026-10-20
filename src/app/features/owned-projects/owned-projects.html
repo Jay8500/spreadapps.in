@@ -26,7 +26,7 @@
         <p>{{ p.description }}</p>
         <div class="links">
           <span class="path">{{ p.path }}</span>
-          <a class="code" [href]="p.codeUrl" target="_blank" rel="noopener">Code</a>
+          <a class="code" [href]="p.codeUrl" target="_blank" rel="noopener">{{ p.linkLabel ?? 'Code' }}</a>
         </div>
       </div>
     }

@@ -28,6 +28,7 @@ export class Ecosystem {
     // Hidden while employed elsewhere — set hidden: false to show again
     { name: 'AI-Lab', status: 'Lab SaaS', barStyle: 'linear-gradient(90deg,#6366F1,#8B5CF6,#10B981)', hidden: true },
     { name: 'Tools', status: 'Free tools', barStyle: 'linear-gradient(90deg,#0D9488,#14B8A6,#5EEAD4)' },
+    { name: 'Setu', status: 'Coming soon', barStyle: 'linear-gradient(90deg,#0D9488,#2DD4BF,#F43F5E)', future: true },
   ];
 
   protected readonly children = this.all.filter((c) => !c.hidden);
