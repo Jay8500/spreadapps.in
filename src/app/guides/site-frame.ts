@@ -20,6 +20,21 @@ import { RouterLink } from '@angular/router';
       </div>
     </header>
     <main class="sf-main"><ng-content /></main>
+    <aside class="author" aria-labelledby="author-h">
+      <img src="profile-photo.jpg" alt="Lakkoju Jaya Krishna" width="88" height="88" loading="lazy" />
+      <div>
+        <p class="author-k">About the author</p>
+        <h2 id="author-h">Lakkoju Jaya Krishna</h2>
+        <p>Full stack engineer from Hyderabad with 7 years of building Angular, Node.js and PostgreSQL products — including a hospital quality platform used for NABH accreditation. Under <b>Spread Apps™</b> he builds free, private tools for everyday India and writes these guides from the questions people ask while using them.</p>
+        <ul class="author-built">
+          <li>🛠️ <a href="https://tools.spreadapps.in/?utm_source=spreadapps.in" target="_blank" rel="noopener">Spread Apps Tools</a> — 70+ free tools, offline PWA with notifications</li>
+          <li>♟️ Chess, Tic-Tac-Toe and Rock Paper Scissors with real-time online play</li>
+          <li>⚙️ <a href="https://engine.spreadapps.in/" target="_blank" rel="noopener">Spread Engine</a> — open npm starter, <code>create-spread-app</code></li>
+          <li>▶️ <a href="https://www.youtube.com/@SpreadApps" target="_blank" rel="noopener">YouTube @SpreadApps</a> — one-minute tool walkthroughs</li>
+        </ul>
+        <p class="author-links"><a routerLink="/">Portfolio</a> · <a href="https://linkedin.com/in/jaya-krishna-lakkoju" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/Jay8500" target="_blank" rel="noopener">GitHub</a></p>
+      </div>
+    </aside>
     <footer class="sf-foot">
       <div class="sf-in">
         <span>© {{ year }} Spread Apps™ · Lakkoju Jaya Krishna · Hyderabad, India</span>

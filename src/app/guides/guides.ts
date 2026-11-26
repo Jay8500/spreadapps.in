@@ -24,9 +24,11 @@ export interface Guide {
   tool: { name: string; url: string };
 }
 
+import { MORE_GUIDES } from './guides-more';
+
 const TOOLS = 'https://tools.spreadapps.in/';
 
-export const GUIDES: Guide[] = [
+const FIRST: Guide[] = [
   {
     slug: 'resize-photo-to-kb-for-exam-forms',
     emoji: '📸',
@@ -475,5 +477,7 @@ export const GUIDES: Guide[] = [
     tool: { name: 'UPI QR code generator for your shop or business', url: TOOLS + 'upi-qr-code-generator' },
   },
 ];
+
+export const GUIDES: Guide[] = [...FIRST, ...MORE_GUIDES];
 
 export const guideBySlug = (slug: string) => GUIDES.find((g) => g.slug === slug);
