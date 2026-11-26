@@ -1,4 +1,7 @@
 import { ApplicationConfig } from '@angular/core';
+import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { provideRouter, withComponentInputBinding, withInMemoryScrolling } from '@angular/router';
+import { routes } from './app.routes';
 import { providePrimeNG } from 'primeng/config';
 import Aura from '@primeuix/themes/aura';
 import { definePreset } from '@primeuix/themes';
@@ -22,5 +25,9 @@ const SpreadApps = definePreset(Aura, {
 });
 
 export const appConfig: ApplicationConfig = {
-  providers: [providePrimeNG({ theme: { preset: SpreadApps } })],
+  providers: [
+    providePrimeNG({ theme: { preset: SpreadApps } }),
+    provideRouter(routes, withInMemoryScrolling({ scrollPositionRestoration: 'top', anchorScrolling: 'enabled' }), withComponentInputBinding()),
+    provideClientHydration(withEventReplay()),
+  ],
 };
