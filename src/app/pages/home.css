@@ -10,3 +10,6 @@
 @media (max-width: 760px) {
   .team-quote-wrap { grid-template-columns: 1fr; }
 }
+
+.pf-head { max-width: 1080px; margin: 24px auto 0; padding: 18px 18px 0; border-top: 1px solid #E2E8F0; }
+.pf-head p { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #0D9488; }

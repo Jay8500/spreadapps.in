@@ -25,6 +25,7 @@ export interface Guide {
 }
 
 import { MORE_GUIDES } from './guides-more';
+import { THIRD_GUIDES } from './guides-third';
 
 const TOOLS = 'https://tools.spreadapps.in/';
 
@@ -478,6 +479,6 @@ const FIRST: Guide[] = [
   },
 ];
 
-export const GUIDES: Guide[] = [...FIRST, ...MORE_GUIDES];
+export const GUIDES: Guide[] = [...FIRST, ...MORE_GUIDES, ...THIRD_GUIDES];
 
 export const guideBySlug = (slug: string) => GUIDES.find((g) => g.slug === slug);

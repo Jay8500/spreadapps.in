@@ -14,19 +14,20 @@ import { Team } from '../features/team/team';
 import { Quote } from '../features/quote/quote';
 import { Footer } from '../features/footer/footer';
 import { GuidesStrip } from '../guides/guides-strip';
+import { AppsShowcase } from './apps-showcase';
 
 /** spreadapps.in home: the portfolio, plus the free guides and tools. */
 @Component({
   selector: 'app-home',
-  imports: [Nav, MobileNav, Hero, Manifesto, Skills, Experience, OwnedProjects, FreelanceWork, Ecosystem, Services, Team, Quote, Footer, GuidesStrip],
+  imports: [Nav, MobileNav, Hero, Manifesto, Skills, Experience, OwnedProjects, FreelanceWork, Ecosystem, Services, Team, Quote, Footer, GuidesStrip, AppsShowcase],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
 export class Home {
   constructor() {
     setSeo({
-      title: 'Jaya Krishna Lakkoju | Spread Apps — Full Stack Engineer, Free Tools & Guides',
-      description: 'Portfolio of Lakkoju Jaya Krishna, full stack engineer and builder of Spread Apps — free tools for India and plain-English guides on exam photos, IFSC, PF, EMI, HRA, gold prices and UPI safety.',
+      title: 'Spread Apps — Free Tools, Games & Guides for India | by Jaya Krishna Lakkoju',
+      description: 'Spread Apps builds free, private apps for everyday India — 70+ tools, games to play with friends, developer tools and plain-English guides on exam photos, PF, EMI, tax and more. Built by full stack engineer Lakkoju Jaya Krishna.',
       path: '',
     });
   }
